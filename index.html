@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Event Planner & Portfolio</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div id="header-placeholder"></div>
+
+    <img src="homeimage.png" alt="Events collage" width="100%">
+
+    <div class="text-container">
+        <h1>Welcome to Event Planner & Portfolio</h1>
+        <p>Connecting you with the best event planners for your dream event.</p>
+        
+        <button onclick="window.location.href='form.html'" style="margin-right: 40px">Plan Your Event</button>
+        <button onclick="window.location.href='planners.html'">Find Event Planners</button>
+        
+        <section class="how-it-works">
+            <h2>How It Works</h2>
+            <p>Submit your event details, filter event planners, and get matched with the right expert for your event!</p>
+        </section>
+    </div>
+
+    <footer>
+        <p>Contact us: contact@eventplanner.com</p>
+    </footer>
+
+    <!-- Script to load the header -->
+    <script>
+        // Load header file
+        fetch('header.html')
+            .then(response => response.text())
+            .then(data => {
+                document.getElementById('header-placeholder').innerHTML = data;
+            });
+    </script>
+</body>
+</html>

@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Event Submission</title>
+    <link rel="stylesheet" href="styles.css">
+    <script>
+        // Update both number fields and slider values
+        function updateBudgetRange() {
+            const minValue = document.getElementById('min-budget').value;
+            const maxValue = document.getElementById('max-budget').value;
+
+            document.getElementById('min-budget-input').value = minValue;
+            document.getElementById('max-budget-input').value = maxValue;
+
+            document.getElementById('min-value').textContent = parseInt(minValue).toLocaleString();
+            document.getElementById('max-value').textContent = parseInt(maxValue).toLocaleString();
+        }
+
+        // Sync slider with number input for min value
+        function updateMinSlider(value) {
+            const minSlider = document.getElementById('min-budget');
+            minSlider.value = value;
+            updateBudgetRange();
+        }
+
+        // Sync slider with number input for max value
+        function updateMaxSlider(value) {
+            const maxSlider = document.getElementById('max-budget');
+            maxSlider.value = value;
+            updateBudgetRange();
+        }
+    </script>
+</head>
+<body>
+    <div id="header-placeholder"></div>
+
+    <h1>Submit your event details</h1>
+
+    <section class="form-section">
+        <form action="#">
+
+            <label for="event-name">Event Name:</label>
+            <input type="text" id="event-name" name="event-name" required><br>
+
+            <label for="event-type">Event Type:</label><br>
+            <div class="radio-group" style="margin-left: 20px;">
+                <input type="radio" id="wedding" name="event-type" value="wedding">
+                <label for="wedding">Wedding</label><br>
+
+                <input type="radio" id="conference" name="event-type" value="conference">
+                <label for="conference">Conference</label><br>
+
+                <input type="radio" id="birthday" name="event-type" value="birthday">
+                <label for="birthday">Birthday</label><br>
+            </div>
+
+            <label for="location">Location:</label>
+            <input type="text" id="location" name="location" required><br>
+
+            <!-- Budget Range Section -->
+            <label for="budget">Budget Range (KSH):</label><br>
+
+            <!-- Min Budget Input and Slider -->
+            <label for="min-budget">Min Budget:</label>
+            <input type="number" id="min-budget-input" value="0" min="0" max="500000" step="100" oninput="updateMinSlider(this.value)" required>
+            <input type="range" id="min-budget" min="0" max="500000" step="500" value="0" class="range-slider" oninput="updateBudgetRange()">
+            <span id="min-value">0</span><br>
+
+            <!-- Max Budget Input and Slider -->
+            <label for="max-budget">Max Budget:</label>
+            <input type="number" id="max-budget-input" value="5000000" min="0" max="500000" step="100" oninput="updateMaxSlider(this.value)" required>
+            <input type="range" id="max-budget" min="0" max="500000" step="500" value="250000" class="range-slider" oninput="updateBudgetRange()">
+            <span id="max-value">250,000</span><br>
+
+            <label for="date">Event Date:</label>
+            <input type="date" id="date" name="date"><br>
+
+            <button type="submit">Submit Event</button>
+        </form>
+    </section>
+
+    <footer>
+        <p>Contact us: contact@eventplanner.com</p>
+    </footer>
+
+    <!-- Script to load the header -->
+    <script>
+        // Load header file
+        fetch('header.html')
+            .then(response => response.text())
+            .then(data => {
+                document.getElementById('header-placeholder').innerHTML = data;
+            });
+    </script>
+</body>
+</html>

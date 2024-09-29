@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Event Planners</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div id="header-placeholder"></div>
+
+    <h1>Find an Event Planner</h1>
+
+    <section class="filter-section">
+        <form action="#">
+            <label for="budget">Filter by Budget (KSH):</label>
+            <input type="number" id="budget" name="budget"><br>
+
+            <label for="location">Filter by Location:</label>
+            <input type="text" id="location" name="location"><br>
+
+            <button type="submit">Apply Filters</button>
+        </form>
+    </section>
+
+    <section class="planner-list">
+        <div class="planner-card" onclick="window.location.href='planner-details.html'">
+            <h3>Anne Kamau</h3>
+            <p>Experience: 5 years</p>
+            <p>Location: Nairobi</p>
+            <p>Budget: KSH5000 - KSH15000</p>
+            <button>View Profile</button>
+        </div>
+
+        <div class="planner-card" onclick="window.location.href='planner-details.html'">
+            <h3>John Onyango</h3>
+            <p>Experience: 8 years</p>
+            <p>Location: Kisumu</p>
+            <p>Budget: KSH100000 - KSH200000</p>
+            <button>View Profile</button>
+        </div>
+
+         <div class="planner-card" onclick="window.location.href='planner-details.html'">
+            <h3>Kimani Kariuki</h3>
+            <p>Experience: 10 years</p>
+            <p>Location: Nakuru</p>
+            <p>Budget: KSH20000 - KSH30000</p>
+            <button>View Profile</button>
+        </div>
+
+         <div class="planner-card" onclick="window.location.href='planner-details.html'">
+            <h3>Eric Ngugi</h3>
+            <p>Experience: 8 years</p>
+            <p>Location: Naivasha</p>
+            <p>Budget: KSH2000 - KSH18000</p>
+            <button>View Profile</button>
+        </div>
+
+         <div class="planner-card" onclick="window.location.href='planner-details.html'">
+            <h3>Evelyn Ngie</h3>
+            <p>Experience: 18 years</p>
+            <p>Location: Kisumu</p>
+            <p>Budget: KSH1000 - KSH5000</p>
+            <button>View Profile</button>
+        </div>
+
+         <div class="planner-card" onclick="window.location.href='planner-details.html'">
+            <h3>Jane Doe</h3>
+            <p>Experience: 1 year</p>
+            <p>Location: Nairobi</p>
+            <p>Budget: KSH5000 - KSH15000</p>
+            <button>View Profile</button>
+        </div>
+
+         <div class="planner-card" onclick="window.location.href='planner-details.html'">
+            <h3>Adam Mwamburi</h3>
+            <p>Experience: 2 years</p>
+            <p>Location: Eldoret</p>
+            <p>Budget: KSH20000 - KSH80000</p>
+            <button>View Profile</button>
+        </div>
+    </section>
+
+    <footer>
+        <p>Contact us: contact@eventplanner.com</p>
+    </footer>
+
+    <!-- Script to load the header -->
+    <script>
+        // Load header file
+        fetch('header.html')
+            .then(response => response.text())
+            .then(data => {
+                document.getElementById('header-placeholder').innerHTML = data;
+            });
+    </script>
+</body>
+</html>

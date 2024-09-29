@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Planner Profile</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div id="header-placeholder"></div>
+    
+        <h1>Planner Profile: Jane Doe</h1>
+
+        <div class="text-container">
+        <section class="profile-details">
+            <div class="planner-details">
+                <h2>Jane Doe</h2>
+                <p>Gender: Female</p>
+                <p>Years of Experience: 1</p>
+                <p>Location: Nairobi</p>
+                <p>Price Range: KSH5000 - KSH15000</p>
+            </div>
+
+            <h3>Past Events</h3>
+            <div class="past-events">
+                <div class="event-card">
+                    <img src="events.jpg" alt="Event 1" width="100%">
+                    <p>Wedding - Central Park, 2022</p>
+                </div>
+                <div class="event-card">
+                    <img src="investments2.png" alt="Event 2" width="100%">
+                    <p>Corporate Conference - Manhattan, 2021</p>
+                </div>
+             
+            </div>
+        </section>
+    </div>
+
+    <footer>
+        <p>Contact us: contact@eventplanner.com</p>
+    </footer>
+
+    <!-- Script to load the header -->
+    <script>
+        // Load header file
+        fetch('header.html')
+            .then(response => response.text())
+            .then(data => {
+                document.getElementById('header-placeholder').innerHTML = data;
+            });
+    </script>
+</body>
+</html>

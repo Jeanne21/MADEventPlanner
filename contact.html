@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Us - Event Planner</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div id="header-placeholder"></div>
+
+    <h1>Contact Us</h1>
+
+    <section class="contact-details">
+        <h2>Get in Touch</h2>
+        <p>Email: <a href="mailto:contact@eventplanner.com">contact@eventplanner.com</a></p>
+        <p>Phone: +254 712345678</p>
+        <p>Address: 123 Event Street, Cityville</p>
+    </section>
+
+    <footer>
+        <p>Follow us on social media for the latest updates.</p>
+    </footer>
+
+    <!-- Script to load the header -->
+    <script>
+        // Load header file
+        fetch('header.html')
+            .then(response => response.text())
+            .then(data => {
+                document.getElementById('header-placeholder').innerHTML = data;
+            });
+    </script>
+</body>
+</html>

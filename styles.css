@@ -1,0 +1,175 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f7f7f7;
+    color: #333;
+}
+
+h1 {
+    font-size: 36px;
+    margin-left: 20px;
+}
+
+button {
+    background-color: #ffcc00;
+    color: #003366;
+    border: none;
+    padding: 10px 20px;
+    cursor: pointer;
+    font-size: 16px;
+    margin-top: 10px;
+}
+
+button:hover {
+    background-color: #ffb700;
+}
+
+.text-container {
+    margin: 20px;
+    justify-content: center;
+}
+
+.how-it-works {
+    margin-top: 40px;
+}
+
+.radio-group {
+    margin-left: 20px; /* Adjust this value to change indentation */
+}
+
+.filter-section, .contact-details, .form-section {
+    padding: 20px;
+    max-width: 800px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+}
+
+.form-section form label,
+.form-section form input,
+.form-section form select,
+.form-section form button,
+.filter-section form label,
+.filter-section form input,
+.filter-section form button {
+    margin-bottom: 20px; 
+}
+
+.planner-list {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(200px, 1fr)); /* Flexible columns */
+    gap: 20px; /* Spacing between the columns and rows */
+    padding: 20px;
+}
+
+.planner-card {
+    background-color: #fff;
+    border: 1px solid #ccc;
+    padding: 20px;
+    margin: 10px;
+    width: 80%;
+    text-align: center;
+}
+
+.event-card {
+    background-color: #fff;
+    border: 1px solid #ccc;
+    padding: 20px;
+    margin: 10px;
+    width: 95%;
+    text-align: center;
+}
+
+.profile-details {
+    width: 100%;
+}
+
+.planner-details {
+    margin-left: 40px;
+}
+
+.past-events {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(200px, 1fr)); /* Flexible columns */
+    gap: 20px; /* Spacing between the columns and rows */
+    padding: 20px;
+}
+
+footer {
+    background-color: #003366;
+    color: white;
+    text-align: center;
+    padding: 20px;
+}
+
+/* Header Styles */
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
+    background-color: #003366;
+    color: white;
+}
+
+.logo-container {
+    display: flex;
+    align-items: center;
+}
+
+.logo {
+    height: 50px;
+    width: auto;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    gap: 20px;
+}
+
+nav ul li {
+    display: inline;
+}
+
+nav ul li a {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 16px;
+}
+
+nav ul li a:hover {
+    color: #ffcc00;
+}
+
+input[type="range"] {
+    width: 100%;  /* Adjust this to whatever width you prefer */
+    height: 10px; /* Increase the height to make it thicker */
+    -webkit-appearance: none; /* Remove default styling for WebKit browsers */
+    appearance: none;
+    background: #ddd; /* Background of the slider */
+    outline: none; /* Remove outline on focus */
+    border-radius: 10px; /* Optional: rounded corners for the slider */
+}
+
+/* Styling for the slider thumb (the draggable part) */
+input[type="range"]::-webkit-slider-thumb {
+    -webkit-appearance: none; /* Remove default styling for WebKit browsers */
+    appearance: none;
+    width: 15px;  /* Increase the width of the thumb */
+    height: 15px; /* Increase the height of the thumb */
+    background: #4CAF50; /* Color of the thumb */
+    cursor: pointer; /* Change cursor to pointer when hovering */
+    border-radius: 50%; /* Make the thumb circular */
+}
+
+input[type="range"]::-moz-range-thumb {
+    width: 25px;  /* Increase the width of the thumb */
+    height: 25px; /* Increase the height of the thumb */
+    background: #4CAF50; /* Color of the thumb */
+    cursor: pointer; /* Change cursor to pointer when hovering */
+    border-radius: 50%; /* Make the thumb circular */
+}
+
