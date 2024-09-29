@@ -59,7 +59,7 @@ button:hover {
 .planner-list {
     display: grid;
     grid-template-columns: repeat(3, minmax(200px, 1fr)); /* Flexible columns */
-    gap: 20px; /* Spacing between the columns and rows */
+    gap: 20px; 
     padding: 20px;
 }
 
@@ -92,7 +92,7 @@ button:hover {
 .past-events {
     display: grid;
     grid-template-columns: repeat(2, minmax(200px, 1fr)); /* Flexible columns */
-    gap: 20px; /* Spacing between the columns and rows */
+    gap: 20px; 
     padding: 20px;
 }
 
@@ -145,31 +145,31 @@ nav ul li a:hover {
 }
 
 input[type="range"] {
-    width: 100%;  /* Adjust this to whatever width you prefer */
-    height: 10px; /* Increase the height to make it thicker */
+    width: 100%;  
+    height: 10px; 
     -webkit-appearance: none; /* Remove default styling for WebKit browsers */
     appearance: none;
-    background: #ddd; /* Background of the slider */
+    background: #ddd; 
     outline: none; /* Remove outline on focus */
-    border-radius: 10px; /* Optional: rounded corners for the slider */
+    border-radius: 10px; 
 }
 
-/* Styling for the slider thumb (the draggable part) */
+/* Styling for the slider draggable part */
 input[type="range"]::-webkit-slider-thumb {
     -webkit-appearance: none; /* Remove default styling for WebKit browsers */
     appearance: none;
-    width: 15px;  /* Increase the width of the thumb */
-    height: 15px; /* Increase the height of the thumb */
-    background: #4CAF50; /* Color of the thumb */
+    width: 15px;  
+    height: 15px; 
+    background: #4CAF50; 
     cursor: pointer; /* Change cursor to pointer when hovering */
-    border-radius: 50%; /* Make the thumb circular */
+    border-radius: 50%; 
 }
 
 input[type="range"]::-moz-range-thumb {
-    width: 25px;  /* Increase the width of the thumb */
-    height: 25px; /* Increase the height of the thumb */
-    background: #4CAF50; /* Color of the thumb */
+    width: 25px;  
+    height: 25px; 
+    background: #4CAF50; 
     cursor: pointer; /* Change cursor to pointer when hovering */
-    border-radius: 50%; /* Make the thumb circular */
+    border-radius: 50%; 
 }
 
